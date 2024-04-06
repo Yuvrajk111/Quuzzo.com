@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("../555.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: rgb(0, 0, 0);
+            color: rgb(252, 3, 194);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            color: rgb(3, 213, 255);
+            text-decoration: none;
+        }
+        
+        .logout {
+            color: rgb(3, 213, 255);
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color:  rgb(0, 0, 0);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .logout:hover {
+            color: black;
+            background-color: rgb(3, 213, 255);
+        }
+
+        .home {
+            color: rgb(3, 213, 255);
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color:  rgb(0, 0, 0); 
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        .home:hover {
+            color: black;
+            background-color: rgb(3, 213, 255);
+        }
+        .popup-info {
+            position: relative;
+            top: 220px;
+            left: 490px;
+            width: 80%;
+            max-width: 600px;
+            min-height: 200px; /* Adjust as needed */
+            backdrop-filter: blur(20px);
+            border-radius: 6px;
+            padding: 10px 25px;
+        }
+
+        .popup-info h2 {
+            font-size: 50px;
+            color: #00c8ff;
+            margin-top: 0;
+        }
+
+        .popup-info .info {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 500;
+            margin: 4px 0;
+            display: block;
+        }
+
+        .popup-info .btn-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #999;
+            margin-top: 10px;
+            padding: 15px 0 7px;
+        }
+
+        .popup-info .btn-group .info-btn {
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            width: 130px;
+            height: 45px;
+            background: #00d9ff;
+            border: 2px solid #00e1ff;
+            outline: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(0, 0, 0, -1);
+            cursor: pointer;
+            transition: .5s;
+            text-align: center; /* Center text horizontally */
+            line-height: 45px; /* Center text vertically */
+        }
+
+        .popup-info .btn-group .info-btn:nth-child(1) {
+            background: transparent;
+            color: #00c8ff;
+        }
+
+        .popup-info .btn-group .info-btn:nth-child(1):hover {
+            background: #00c8ff;
+            color: #fff;
+        }
+
+        .popup-info .btn-group .info-btn:nth-child(2):hover {
+            background: #00c8ff;
+            color: #fff;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .popup-info {
+                position: relative;
+                top: 230px;
+                left: 180px;
+                width: 450px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .popup-info {
+                position: relative;
+                top: 280px;
+                left: 150px;
+                width: 450px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="logo">Quuzzo.com</a>
+        <div>
+            <a href="profile.php" class="home">Home</a>
+            <a href="../logout.php" class="logout"><u>Logout</u></a>
+        </div>
+    </div>
+
+<div class="popup-info">
+    <h2>Quiz Guide</h2>
+    <span class="info">1. Present 10 questions in the quiz, ensuring each user encounters the same set.</span>
+    <span class="info">2. Allow users a second attempt at all questions, promoting learning and improvement.</span>
+    <span class="info">3. Display the user's score after completing the quiz, emphasizing achievement and progress.</span>
+    <span class="info">4. Offer an option to exit the quiz at any point, respecting user autonomy.</span>
+    <span class="info">5. Enable users to start the quiz or continue from where they left off, facilitating seamless navigation.</span>
+    <div class="btn-group">
+        <a href="start_quiz.php" class="info-btn exit-btn">Exit Quiz</a>
+        <a href="continue.html" class="info-btn continue-btn">continue</a>
+    </div>
+</div>
+
+<!-- Your JavaScript file -->
+
+
+</body>
+</html>

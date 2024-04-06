@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Container</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("../444.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the left */
+            justify-content: center;
+            padding: 2px;
+            border-radius: 10px;
+            backdrop-filter: blur(20px);  
+            overflow: hidden;  
+            position: relative; /* Position relative for absolute positioning of the button */
+        }
+
+        h1 {
+            color: rgb(4, 248, 236);
+            font-size: 2em;
+            margin-bottom: 20px;
+            margin-left: 570px;
+        }
+
+        .buttons {
+            position: absolute;  
+            top: 10px; 
+            left: 10px;  
+        }    
+        .button {
+            padding: 10px 20px;  
+            color: rgb(162, 81, 255);
+            background-color: rgb(4, 248, 236);  
+            border: none;  
+            border-radius: 5px;  
+            text-decoration: none;  
+            color: black; 
+            font-weight: bold;  
+            cursor: pointer;  
+            transition: background-color 0.3s;  
+        }
+
+        .button:hover {
+            color: white;
+            background-color: rgb(162, 81, 255);  
+        }
+
+        .videos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;  
+        }
+
+        .video-container {
+            width: calc(50% - 20px);  
+            max-width: 400px;  
+            margin: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .video {
+            width: 100%;   
+            height: 250px; 
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                margin-left: 200px;
+            }
+            .video-container {
+                width: calc(100% - 20px);
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <a href="profile.php" class="button"><b> < Back </b></a>
+        </div>
+        <h1>Study Material</h1>
+        <div class="videos">
+            <!-- Video 1 -->
+            <div class="video-container">
+                <iframe class="video" src="https://www.youtube.com/embed/HcOc7P5BMi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <!-- Video 2 -->
+            <div class="video-container">
+                <iframe class="video" src="https://www.youtube.com/embed/ESnrn1kAD4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="video-container">
+                <iframe class="video" src="https://www.youtube.com/embed/UmnCZ7-9yDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="video-container">
+                <iframe class="video" src="https://www.youtube.com/embed/VlPiVmYuoqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

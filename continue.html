@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codehal Quiz</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+    }
+    .quiz-section {
+        position: relative;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        transition: .8s ease-in-out;
+        transition-delay: .25s;
+    }
+    .quiz-section .quiz-box {
+        position: relative;
+        width: 500px;
+        background: transparent;
+        border: 2px solid #c40094;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+    }
+    .quiz-section .quiz-box.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+      transition: 1s ease;
+      transition-delay: 1s;
+}
+    .quiz-box h1 {
+        font-size: 32px;
+        color: white;
+        text-align: center;
+        background: linear-gradient(45deg,transparent,#c40094,transparent);
+        border-radius: 6px;
+    }
+    .quiz-box .quiz-header {
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 2px solid #c40094;
+        margin-bottom: 30px;
+    }
+    .quiz-header span {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .quiz-header .header-score {
+        color: white;
+        background: #c40094;
+        border-radius: 3px;
+        padding: 7px;
+    }
+    .quiz-box .question-text {
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .option-list .option {
+        width: 100%;
+        padding: 12px;
+        color: white;
+        background: transparent;
+        border: 2px solid rgba(255,255,255, .2);
+        border-radius: 4px;
+        font-size: 17px;
+        margin: 15px 0;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .option-list .option:hover {
+        background: rgba(255,255,255, .1);
+        border-color: rgba(255,255,255, .1);
+    }
+    .quiz-box .quiz-footer {
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid #c40094;
+        padding-top: 20px;
+        margin-top: 25px;
+
+    }
+    .quiz-footer .question-total {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .quiz-footer .next-btn {
+        width: 100px;
+        height: 45px;
+        background: rgba(255,255,255, .1);
+        border: 2px solid rgba(255,255,255, .1);
+        outline: none;
+        border-radius: 6px;
+        font-size: 16px;
+        color: rgba(255,255,255, .3);
+        font-weight: 600;
+        cursor: pointer;
+        pointer-events: none;
+        transition: .5s;
+    }
+    .quiz-footer .next-btn:hover {
+        background: #950170;
+        border-color: #950170;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <section class="quiz-section">
+        <div class="quiz-box">
+            <h1>Codehal Quiz</h1>
+            <div class="question-text"></div>
+            <div class="option-list"></div>
+            <div class="quiz-footer">
+                <span class="question-total">1 of 5 Questions</span>
+                <button class="next-btn">Next</button>
+            </div>
+            <div class="score-section">
+                <h2>Score: <span class="score">0</span> / <span class="total-score">0</span></h2>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
